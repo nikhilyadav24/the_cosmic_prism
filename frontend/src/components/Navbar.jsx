@@ -6,7 +6,7 @@ const Navbar = () => {
   const [visible, setVisible] = useState(false);
 
   return (
-    <div className="fixed top-0 left-1/2 -translate-x-1/2 w-[clamp(250px,80vw,1800px)] flex items-center justify-between py-4 font-medium px-6 rounded-full mt-4 bg-white/10 backdrop-blur-md z-50 shadow-md text-white">
+    <div className="fixed top-0 left-1/2 -translate-x-1/2 w-[clamp(250px,86vw,1800px)] flex items-center justify-between py-2 font-medium px-6 rounded-full mt-4 bg-white/10 backdrop-blur-md z-50 shadow-md text-white">
       <NavLink to="/" className="flex flex-col items-center gap-1">
       <img src={assets.logo} alt="logo" className="w-32" />
       </NavLink>
@@ -78,3 +78,26 @@ const Navbar = () => {
 };
 
 export default Navbar;
+
+
+
+
+//Notes
+// useState – to manage state
+// The useState hook lets you add reactive state to a functional component.
+
+// useEffect – to handle side effects
+// The useEffect hook lets you run code after rendering, like fetching data, setting up subscriptions, timers, etc.
+
+// ex - 
+// import React, { useState, useEffect } from 'react';
+
+// function WatchCount() {
+//   const [count, setCount] = useState(0);
+
+//   useEffect(() => {
+//     console.log(`Count changed: ${count}`);
+//   }, [count]); // runs whenever `count` changes
+
+//   return <button onClick={() => setCount(count + 1)}>Increase</button>;
+// }
