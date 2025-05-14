@@ -1,13 +1,14 @@
 import React from 'react'
 import Hero from '../components/Hero'
-import LatestCollection from '../components/FeaturedWork'
-import HorizontalScrollCards from '../components/HorizontalScroll'
+import LatestWork from '../components/LatestWork'
+import FeaturedProducts from '../components/FeaturedWork'
 
 const Home = () => {
   return (
     <div>
       <Hero/>
-      <LatestCollection/>
+      <FeaturedProducts/>
+      <LatestWork/>
     </div>
   )
 }

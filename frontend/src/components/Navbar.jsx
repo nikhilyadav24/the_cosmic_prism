@@ -8,7 +8,7 @@ const Navbar = () => {
   return (
     <div className="fixed top-0 left-1/2 -translate-x-1/2 w-[clamp(250px,86vw,1800px)] flex items-center justify-between py-2 font-medium px-6 rounded-full mt-4 bg-white/10 backdrop-blur-md z-50 shadow-md text-white">
       <NavLink to="/" className="flex flex-col items-center gap-1">
-      <img src={assets.logo} alt="logo" className="w-32" />
+      <img src={assets.logo} id="logo" alt="logo" className="w-32" />
       </NavLink>
 
       <ul className="hidden md:flex gap-5 text-sm text-white">

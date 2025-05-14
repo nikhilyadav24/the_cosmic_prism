@@ -3,16 +3,14 @@ import { ShopContext } from '../Context/ShopContext'
 import { ProductItem } from './ProductItem';
 import Title from './Title';
 
-const FeaturedProducts = () => {
+const LatestWork = () => {
 
         const {products} = useContext(ShopContext);
         // console.log(products);
-        const [bestSeller , setbestSeller] = useState([]);
+        const [latestProducts , setLatestProducts] = useState([]);
     
         useEffect(()=>{
-            const bestSeller = (products.filter((item) => (item.bestseller)));
-            setbestSeller(bestSeller.slice(0,5));
-
+            setLatestProducts(products.slice(0,10));
         },[])
 
 
@@ -30,7 +28,7 @@ const FeaturedProducts = () => {
   return (
     <div className="w-full">
       {/* Page Header */}
-      <Title text1={"Featured"} text2={"Work"} />
+      <Title text1={"Latest"} text2={"Work"} />
 
       {/* Horizontal Scrolling Container */}
       <div className="relative group">
@@ -58,7 +56,7 @@ const FeaturedProducts = () => {
           className="overflow-x-auto flex space-x-4 py-4 scrollbar-hidden"
         >
             {
-            bestSeller.map((item, index) => (
+            latestProducts.map((item, index) => (
                 <ProductItem
                 key={index}
                 id={item._id} 
@@ -75,4 +73,4 @@ const FeaturedProducts = () => {
   );
 };
 
-export default FeaturedProducts;
+export default LatestWork;
